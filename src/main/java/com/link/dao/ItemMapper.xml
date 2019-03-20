@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.link.dao.ItemMapper">
+    
+    <!--根据id查询商品信息  -->
+    <select id="selectById" resultType="com.link.pojo.Item" parameterType="java.lang.Long">
+    	select * from item where id=#{id}
+    </select>
+    
+    <!-- 查询所有item -->  
+    <select id="queryAll" resultType="com.link.pojo.Item" parameterType="java.lang.Integer">
+        select * from item
+    </select>
+    
+</mapper>
